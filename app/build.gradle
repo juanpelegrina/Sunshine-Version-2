@@ -26,3 +26,12 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.2'
 }
+
+// REQUIRED: Google's new Maven repo is required for the latest
+// support library that is compatible with Android 8.0
+repositories {
+   maven {
+       url 'https://maven.google.com'
+       // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
+   }
+}
